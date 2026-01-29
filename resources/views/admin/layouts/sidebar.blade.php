@@ -41,10 +41,38 @@
         <div class="sidebar-menu">
             <ul class="menu">
                 <li class="sidebar-title">Menu</li>
-                <li class="sidebar-item  ">
-                    <a href="index.html" class='sidebar-link'>
+                <li class="sidebar-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                    <a href="{{ route('dashboard') }}" class='sidebar-link'>
                         <i class="bi bi-grid-fill"></i>
                         <span>Dashboard</span>
+                    </a>
+                </li>
+                
+                <li class="sidebar-item {{ request()->routeIs('items.*') ? 'active' : '' }}">
+                    <a href="{{ route('items.index') }}" class='sidebar-link'>
+                        <i class="bi bi-box-seam-fill"></i>
+                        <span>Items</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item {{ request()->routeIs('kategori.*') ? 'active' : '' }}">
+                    <a href="{{ route('kategori.index') }}" class='sidebar-link'>
+                        <i class="bi bi-tags-fill"></i>
+                        <span>Kategori</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item {{ request()->routeIs('ruang.*') ? 'active' : '' }}">
+                    <a href="{{ route('ruang.index') }}" class='sidebar-link'>
+                        <i class="bi bi-building-fill"></i>
+                        <span>Ruang</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item {{ request()->routeIs('reports.*') ? 'active' : '' }}">
+                    <a href="{{ route('reports.index') }}" class='sidebar-link'>
+                        <i class="bi bi-file-earmark-text-fill"></i>
+                        <span>Reports</span>
                     </a>
                 </li>
             </ul>

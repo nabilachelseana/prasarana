@@ -11,7 +11,7 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        //
+        $kategori = Kategori::all();
     }
 
     /**
@@ -43,7 +43,7 @@ class KategoriController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('admin.kategori.edit');
     }
 
     /**
